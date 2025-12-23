@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<TITLE>PLAYER</TITLE>
+</HEAD>
+
+<BODY bgcolor="#000000" text="#ffffff" link="#ffff99" vlink="#ffffdd" alink="#ffffff">
+<div id="webamp-container"></div>
+
+<script src="https://unpkg.com/webamp@1.4.2/built/webamp.bundle.min.js"></script>
+<script>
+  const webamp = new Webamp({
+    initialTracks: [
+      {
+        metaData: { artist: "MobWulf", title: "Fire" },
+        url: "audio/Fire.mp3",
+        duration: 90
+      }
+    ]
+  });
+
+  webamp.renderWhenReady(document.getElementById("webamp-container"));
+</script>
+
+</BODY>
+</HTML>
