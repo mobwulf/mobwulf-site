@@ -4,244 +4,140 @@
 
 <SCRIPT Language="JavaScript">
 <!--
-// preload rollover images:
 if (document.images) {
   nav1_off = new Image(); nav1_off.src = "images/ui/nav1_off.gif";
   nav1_on  = new Image(); nav1_on.src  = "images/ui/nav1_on.gif";
-
   nav2_off = new Image(); nav2_off.src = "images/ui/nav2_off.gif";
   nav2_on  = new Image(); nav2_on.src  = "images/ui/nav2_on.gif";
-
   nav3_off = new Image(); nav3_off.src = "images/ui/nav3_off.gif";
   nav3_on  = new Image(); nav3_on.src  = "images/ui/nav3_on.gif";
-
   nav4_off = new Image(); nav4_off.src = "images/ui/nav4_off.gif";
   nav4_on  = new Image(); nav4_on.src  = "images/ui/nav4_on.gif";
-
   nav5_off = new Image(); nav5_off.src = "images/ui/nav5_off.gif";
   nav5_on  = new Image(); nav5_on.src  = "images/ui/nav5_on.gif";
-
   nav6_off = new Image(); nav6_off.src = "images/ui/nav6_off.gif";
   nav6_on  = new Image(); nav6_on.src  = "images/ui/nav6_on.gif";
-
   nav7_off = new Image(); nav7_off.src = "images/ui/nav7_off.gif";
   nav7_on  = new Image(); nav7_on.src  = "images/ui/nav7_on.gif";
 }
 
-function rollOver(imgDocID, imgObjName) {
-  if (document.images) {
-    document.images[imgDocID].src = eval(imgObjName + ".src");
-  }
+function rollOver(imgDocID,imgObjName) {
+  if (document.images) document.images[imgDocID].src = eval(imgObjName + ".src");
 }
 
 function popMsg() {
-  window.open(
-    "popup.html",
-    "mobwulfpopup",
-    "width=320,height=220,scrollbars=no,status=no,resizable=yes"
-  );
+  window.open("popup.html","mobwulfpopup","width=320,height=220,scrollbars=no,status=no,resizable=yes");
 }
 // -->
 </SCRIPT>
-
-<style>
-  /* Keep Webamp in the corner and predictable */
-  #webamp-container {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    z-index: 9999;
-  }
-
-  /* Hide Webamp on small screens (authentic + practical) */
-  @media (max-width: 600px) {
-    #webamp-container { display: none; }
-  }
-</style>
 
 </HEAD>
 
 <BODY bgcolor=#000000 text=#ffffff link=#ffff99 vlink=#ffffdd alink=#ffffff>
 
-<div id="webamp-container"></div>
-
 <center>
 
-<table cellpadding=0 cellspacing=0 border=0 width=580>
+<table cellpadding=0 cellspacing=0 border=0 width=760>
 <tr>
+  <!-- LEFT GUTTER -->
   <td width=40 valign=top>
-    <img src="images/ui/shortline.gif" vspace=0 hspace=0 border=0 width=40 height=53>
+    <img src="images/ui/shortline.gif" border=0 width=40 height=53>
     <br clear=left>
   </td>
 
-  <td valign=top width=110>
-    <img src="images/ui/littlespot.gif" align=left vspace=0 hspace=0 border=0 width=110 height=80>
+  <!-- LEFT INFO BOX -->
+  <td valign=top width=160>
+    <img src="images/ui/littlespot.gif" align=left border=0 width=110 height=80>
     <br clear=left>
+    <font face="arial, geneva, helvetica" size="-1" color="#c4c4c4">
+      <p>
+      <b>MobWulf Terminal</b>
+      <p>
+      <a href="index_main.html" target="main">HOME</a>
+      <p>
+      <b>NOTICE:</b><br>
+      Proceed normally.
+    </font>
   </td>
 
-  <td valign=top width=238>
-    <img src="images/ui/masthead.gif" align=left vspace=2 hspace=0 border=0 width=238 height=55 alt="MobWulf">
-    <br clear=left>
-  </td>
+  <td width=20>&nbsp;</td>
 
-  <td valign=middle align=left width=12 rowspan=4>
-    <img src="images/ui/dot.gif" align=left vspace=0 hspace=1 border=0 width=10 height=1>
-    <br clear=left>
-  </td>
-
-  <td valign=middle align=left width=180 rowspan=3>
-    <img src="images/ui/dot.gif" align=left vspace=0 hspace=0 border=0 width=160 height=1><br clear=left>
-
-    <A HREF="about.html"
-      onMouseover="rollOver('nav1','nav1_on')"
-      onMouseout="rollOver('nav1','nav1_off')">
-      <img name="nav1" src="images/ui/nav1_off.gif" align=left vspace=2 hspace=0 border=0 width=136 height=46>
-    </A>
-    <br clear=left>
-
-    <A HREF="video.html"
-      onMouseover="rollOver('nav2','nav2_on')"
-      onMouseout="rollOver('nav2','nav2_off')">
-      <img name="nav2" src="images/ui/nav2_off.gif" align=left vspace=0 hspace=0 border=0 width=142 height=35>
-    </A>
-    <br clear=left>
-
-    <A HREF="lore.html"
-      onMouseover="rollOver('nav3','nav3_on')"
-      onMouseout="rollOver('nav3','nav3_off')">
-      <img name="nav3" src="images/ui/nav3_on.gif" align=left vspace=0 hspace=0 border=0 width=173 height=34>
-    </A>
-    <br clear=left>
-
-    <A HREF="log.html"
-      onMouseover="rollOver('nav4','nav4_on')"
-      onMouseout="rollOver('nav4','nav4_off')">
-      <img name="nav4" src="images/ui/nav4_off.gif" align=left vspace=0 hspace=0 border=0 width=160 height=34>
-    </A>
-    <br clear=left>
-
-    <A HREF="downloads.html"
-      onMouseover="rollOver('nav5','nav5_on')"
-      onMouseout="rollOver('nav5','nav5_off')">
-      <img name="nav5" src="images/ui/nav5_off.gif" align=left vspace=0 hspace=0 border=0 width=128 height=32>
-    </A>
-    <br clear=left>
-
-    <A HREF="links.html"
-      onMouseover="rollOver('nav6','nav6_on')"
-      onMouseout="rollOver('nav6','nav6_off')">
-      <img name="nav6" src="images/ui/nav6_off.gif" align=left vspace=0 hspace=0 border=0 width=140 height=53>
-    </A>
-    <br clear=left>
-
-    <A HREF="javascript:popMsg();"
-      onMouseover="rollOver('nav7','nav7_on')"
-      onMouseout="rollOver('nav7','nav7_off')">
-      <img name="nav7" src="images/ui/nav7_off.gif" align=left vspace=0 hspace=0 border=0 width=156 height=57>
-    </A>
-
-  </td>
-</tr>
-
-<tr>
-  <td valign=top align=left colspan=2>
-    <img src="images/ui/dot.gif" align=left vspace=0 hspace=12 border=0 width=1 height=1>
-
-    <table width=107 cellpadding=0 cellspacing=0 border=0>
+  <!-- MAIN CONTENT (SQUARED BOX) -->
+  <td valign=top width=360>
+    <table cellpadding=12 cellspacing=0 border=2 width=100% bgcolor="#050505">
       <tr>
-        <td valign=bottom align=right width=107>
-          <br><br>
-          <font face="arial, geneva, helvetica">
-          <font size="-1" color=#c4c4c4>
-
-          Welcome.
-          <p>
-          If you're new here:<br>
-          <a href="about.html">Start Here</a>
-          <p>
-
-          Who, What, Why?
-          <a href="about.html">Contact</a>
-          <p>
-
-          <b>NOTICE:</b><br>
-          WELCOME to my website <i>Fans of MobWulf</i>.
-          <br>
-          Proceed normally.
-
+        <td>
+          <font face="verdana,arial,helvetica" color="#ffff99">
+            <b><!-- PAGE HEADER HERE --></b>
           </font>
+          <p>
+          <font face="verdana,arial,helvetica" size="-1" color="#ffffff">
+            <!-- PAGE CONTENT HERE -->
+            This page is empty on purpose.
+            <p>
+            Replace this with your own text, images, tracklists, logs, whatever.
+          </font>
+          <p>
+          <font face="verdana,arial,helvetica" size="-2" color="#aaaaaa">
+            Updated: ??? &nbsp;&nbsp; Status: ONLINE
           </font>
         </td>
       </tr>
     </table>
-
-    <img src="images/ui/dot.gif" align=left vspace=6 hspace=0 border=0 width=120 height=2>
-    <br clear=left>
   </td>
 
-  <td valign=top align=left width=273>
-    <font face=verdana,arial,helvetica color=#ffff99>
-      MobWulf Presents:
-    </font>
-    <p>
+  <td width=20>&nbsp;</td>
 
-    <font face=verdana,arial,helvetica size=-1>
-      <b>W W W . M O B W U L F . C O M</b>
-      <p>
-      Video will appear in the VIDEO section when available.
-      <p>
+  <!-- RIGHT NAV -->
+  <td valign=top width=200>
 
-      <font size="-2">
-        <a href="log.html">Read the system log</a>
-        <p>
-        <a href="links.html">External links (use caution)</a>
-        <p>
-      </font>
-    </font>
+    <A HREF="about.html" target="main"
+      onMouseover="rollOver('nav1','nav1_on')"
+      onMouseout="rollOver('nav1','nav1_off')">
+      <img name="nav1" src="images/ui/nav1_off.gif" border=0>
+    </A><br clear=left>
+
+    <A HREF="music.html" target="main"
+      onMouseover="rollOver('nav2','nav2_on')"
+      onMouseout="rollOver('nav2','nav2_off')">
+      <img name="nav2" src="images/ui/nav2_on.gif" border=0>
+    </A><br clear=left>
+
+    <A HREF="videos.html" target="main"
+      onMouseover="rollOver('nav3','nav3_on')"
+      onMouseout="rollOver('nav3','nav3_on')">
+      <img name="nav3" src="images/ui/nav3_off.gif" border=0>
+    </A><br clear=left>
+
+    <A HREF="pics.html" target="main"
+      onMouseover="rollOver('nav4','nav4_on')"
+      onMouseout="rollOver('nav4','nav4_off')">
+      <img name="nav4" src="images/ui/nav4_off.gif" border=0>
+    </A><br clear=left>
+
+    <A HREF="store.html" target="main"
+      onMouseover="rollOver('nav5','nav5_on')"
+      onMouseout="rollOver('nav5','nav5_off')">
+      <img name="nav5" src="images/ui/nav5_off.gif" border=0>
+    </A><br clear=left>
+
+    <A HREF="blog.html" target="main"
+      onMouseover="rollOver('nav6','nav6_on')"
+      onMouseout="rollOver('nav6','nav6_off')">
+      <img name="nav6" src="images/ui/nav6_off.gif" border=0>
+    </A><br clear=left>
+
+    <A HREF="theydie.html" target="main"
+      onMouseover="rollOver('nav7','nav7_on')"
+      onMouseout="rollOver('nav7','nav7_off')">
+      <img name="nav7" src="images/ui/nav7_off.gif" border=0>
+    </A><br clear=left>
+
   </td>
 </tr>
-
-<tr>
-  <td>
-    <img src="images/ui/dot.gif" align=left vspace=3 hspace=0 border=0 width=1 height=1>
-  </td>
-</tr>
-
-<tr>
-  <td valign=bottom align=left colspan=2>
-    <A HREF="map.html"><img src="images/ui/sitemap.gif" align=left vspace=0 hspace=0 border=0 width=38 height=48></A>
-    <A HREF="downloads.html"><img src="images/ui/tours.gif" align=left vspace=0 hspace=0 border=0 width=31 height=48></A>
-    <A HREF="log.html"><img src="images/ui/new.gif" align=left vspace=0 hspace=0 border=0 width=31 height=48></A>
-    <A HREF="search.html"><img src="images/ui/search.gif" align=left vspace=0 hspace=0 border=0 width=50 height=48></A>
-  </td>
-
-  <td valign=bottom align=left>
-    <img src="images/ui/jfy.gif" align=left vspace=0 hspace=0 border=0 width=237 height=48>
-  </td>
-
-  <td>
-    <a href="javascript:popMsg();"><img src="images/ui/willthey.gif" width=105 height=46 border=0></a>
-  </td>
-</tr>
-
 </table>
 
 </center>
-
-<script src="https://unpkg.com/webamp@1.4.2/built/webamp.bundle.min.js"></script>
-<script>
-  const webamp = new Webamp({
-    initialTracks: [
-      {
-        metaData: { artist: "MobWulf", title: "Fire" },
-        url: "audio/Fire.mp3",
-        duration: 90
-      }
-    ]
-  });
-
-  webamp.renderWhenReady(document.getElementById("webamp-container"));
-</script>
 
 </BODY>
 </HTML>
