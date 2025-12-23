@@ -1,14 +1,32 @@
+<!DOCTYPE HTML>
 <HTML>
-<HEAD><TITLE>M O B W U L F</TITLE></HEAD>
+<HEAD>
+  <TITLE>M O B W U L F</TITLE>
+  <META NAME="viewport" CONTENT="width=device-width, initial-scale=1">
+
+  <!-- Mobile fallback: framesets are flaky on iOS -->
+  <SCRIPT>
+    (function () {
+      var isSmall = Math.min(screen.width, window.innerWidth || 9999) <= 800;
+      var isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+      if (isSmall || isIOS) {
+        window.location.replace("/index_main.html");
+      }
+    })();
+  </SCRIPT>
+</HEAD>
 
 <FRAMESET cols="*,320" frameborder="0" border="0">
-  <FRAME src="index_main.html" name="main" scrolling="auto" noresize>
-  <FRAME src="player.html" name="player" scrolling="no" noresize>
+  <FRAME src="/index_main.html" name="main" scrolling="auto" noresize>
+  <FRAME src="/player.html" name="player" scrolling="no" noresize>
 </FRAMESET>
 
 <NOFRAMES>
-<BODY bgcolor="#000000" text="#ffffff">
-This site requires frames.
+<BODY bgcolor="#000000" text="#ffffff" link="#ffff99" vlink="#ffffdd" alink="#ffffff">
+  <font face="verdana,arial,helvetica" size="-1">
+    This site uses frames. Your device/browser may not support them.<br><br>
+    <a href="/index_main.html">Enter MobWulf (mobile)</a>
+  </font>
 </BODY>
 </NOFRAMES>
 
