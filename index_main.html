@@ -57,66 +57,6 @@ function popMsg() {
   @media (max-width: 600px) {
     #webamp-container { display: none; }
   }
-
-  <HTML>
-<HEAD>
-<TITLE>M O B W U L F</TITLE>
-
-<SCRIPT Language="JavaScript">
-<!--
-// preload rollover images:
-if (document.images) {
-  nav1_off = new Image(); nav1_off.src = "images/ui/nav1_off.gif";
-  nav1_on  = new Image(); nav1_on.src  = "images/ui/nav1_on.gif";
-
-  nav2_off = new Image(); nav2_off.src = "images/ui/nav2_off.gif";
-  nav2_on  = new Image(); nav2_on.src  = "images/ui/nav2_on.gif";
-
-  nav3_off = new Image(); nav3_off.src = "images/ui/nav3_off.gif";
-  nav3_on  = new Image(); nav3_on.src  = "images/ui/nav3_on.gif";
-
-  nav4_off = new Image(); nav4_off.src = "images/ui/nav4_off.gif";
-  nav4_on  = new Image(); nav4_on.src  = "images/ui/nav4_on.gif";
-
-  nav5_off = new Image(); nav5_off.src = "images/ui/nav5_off.gif";
-  nav5_on  = new Image(); nav5_on.src  = "images/ui/nav5_on.gif";
-
-  nav6_off = new Image(); nav6_off.src = "images/ui/nav6_off.gif";
-  nav6_on  = new Image(); nav6_on.src  = "images/ui/nav6_on.gif";
-
-  nav7_off = new Image(); nav7_off.src = "images/ui/nav7_off.gif";
-  nav7_on  = new Image(); nav7_on.src  = "images/ui/nav7_on.gif";
-}
-
-function rollOver(imgDocID, imgObjName) {
-  if (document.images) {
-    document.images[imgDocID].src = eval(imgObjName + ".src");
-  }
-}
-
-function popMsg() {
-  window.open(
-    "popup.html",
-    "mobwulfpopup",
-    "width=320,height=220,scrollbars=no,status=no,resizable=yes"
-  );
-}
-// -->
-</SCRIPT>
-
-<style>
-  /* Keep Webamp in the corner and predictable */
-  #webamp-container {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    z-index: 9999;
-  }
-
-  /* Hide Webamp on small screens (authentic + practical) */
-  @media (max-width: 600px) {
-    #webamp-container { display: none; }
-  }
 </style>
 
 </HEAD>
