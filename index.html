@@ -4,30 +4,55 @@
   <TITLE>M O B W U L F</TITLE>
   <META NAME="viewport" CONTENT="width=device-width, initial-scale=1">
 
-  <!-- Mobile fallback: framesets are flaky on iOS -->
-  <SCRIPT>
-    (function () {
-      var isSmall = Math.min(screen.width, window.innerWidth || 9999) <= 800;
-      var isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-      if (isSmall || isIOS) {
-        window.location.replace("/index_main.html");
-      }
-    })();
-  </SCRIPT>
+  <style>
+    html, body { height: 100%; margin: 0; background: #000; }
+    body { overflow: hidden; }
+
+    /* Desktop layout: main + player */
+    .wrap {
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+    }
+
+    iframe {
+      border: 0;
+      height: 100%;
+    }
+
+    /* Left pane */
+    #mainframe {
+      flex: 1 1 auto;
+      width: 100%;
+    }
+
+    /* Right pane (Winamp) */
+    #playerframe {
+      width: 320px;
+      flex: 0 0 320px;
+    }
+
+    /* Mobile: hide player, show main only */
+    @media (max-width: 800px) {
+      body { overflow: auto; }
+      .wrap { display: block; }
+      #playerframe { display: none; }
+      #mainframe { height: 100vh; }
+    }
+  </style>
 </HEAD>
 
-<FRAMESET cols="*,320" frameborder="0" border="0">
-  <FRAME src="/index_main.html" name="main" scrolling="auto" noresize>
-  <FRAME src="/player.html" name="player" scrolling="no" noresize>
-</FRAMESET>
+<BODY>
+  <div class="wrap">
+    <iframe id="mainframe" src="/index_main.html" name="main" scrolling="auto"></iframe>
+    <iframe id="playerframe" src="/player.html" name="player" scrolling="no"></iframe>
+  </div>
 
-<NOFRAMES>
-<BODY bgcolor="#000000" text="#ffffff" link="#ffff99" vlink="#ffffdd" alink="#ffffff">
-  <font face="verdana,arial,helvetica" size="-1">
-    This site uses frames. Your device/browser may not support them.<br><br>
-    <a href="/index_main.html">Enter MobWulf (mobile)</a>
-  </font>
+  <NOSCRIPT>
+    <font face="verdana,arial,helvetica" size="-1" color="#ffffff">
+      This site uses frames/iframes. JavaScript is disabled.<br><br>
+      <a href="/index_main.html">Enter MobWulf</a>
+    </font>
+  </NOSCRIPT>
 </BODY>
-</NOFRAMES>
-
 </HTML>
